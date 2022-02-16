@@ -53,3 +53,29 @@ const state = {
   ],
   cart: []
 };
+
+const storeItemList = document.querySelector(".store--item-list")
+const listItemElement = document.createElement("li")
+storeItemList.append(listItemElement)
+
+const divIcon = document.createElement("div")
+divIcon.setAttribute('class', "store--item-icon")
+listItemElement.appendChild(divIcon)
+
+const items = state.items[0]
+
+const itemIcon = document.createElement("img")
+// itemIcon.setAttribute('src', "assets/icons/001-beetroot.svg")
+Object.assign(itemIcon, {src: `assets/icons/${items.id}.svg`, alt: 'beetroot'})
+divIcon.appendChild(itemIcon)
+
+const buttonAddCart = document.createElement("button")
+buttonAddCart.innerText = "Add to cart"
+listItemElement.appendChild(buttonAddCart)
+
+const listItemElement2 = document.createElement("li")
+storeItemList.appendChild(listItemElement2)
+
+
+
+
